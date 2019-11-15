@@ -91,11 +91,22 @@ The resulting contact information strings should have a space between the first 
 
 Log the result of your new array. */
 const contactInfo = [];
-console.log(contactInfo);
+graduates.forEach(index => contactInfo.push(index.first_name + ' ' + index.email));
+console.log('Contact Info: ', contactInfo);
 
 /* Request 3: Find out how many universities have the string "Uni" included in their name. Create a new array called unisWithUni that contains them all. This will be an array of objects. Log the result. */
 const unisWithUni = [];
-console.log(unisWithUni);
+
+function findUni(){
+  universities.forEach(university => {
+    if (university.indexOf('Uni') > -1){
+      unisWithUni.push(university);
+    }
+  })
+}
+
+findUni();
+console.log('I have Uni: ', unisWithUni);
 
 
 console.log('==== ARRAYS ====');
@@ -123,7 +134,8 @@ The zoos want to display both the scientific name and the animal name in front o
 
 */
 const displayNames = [];
-console.log(displayNames);
+zooAnimals.forEach(index => displayNames.push('Name: ' + index.animal_name + ', Scientific: ' + index.scientific_name));
+console.log('Display Name: ', displayNames);
 
 /* Request 2: .map()
 
@@ -139,16 +151,22 @@ console.log(lowCaseAnimalNames);
 The zoos are concerned about animals with a lower population count. Using filter, create a new array of objects called lowPopulationAnimals which contains only the animals with a population less than 5.
 
 */
-const lowPopulationAnimals = [];
-console.log(lowPopulationAnimals);
+const lowPopulationAnimals = zooAnimals.filter(index => {
+  if( index.population < 5) {
+    return index.population;
+  }
+});
+console.log('Low Population Animals: ', lowPopulationAnimals);
 
 /* Request 4: .reduce() 
 
 The zoos need to know their total animal population across the United States. Find the total population from all the zoos using the .reduce() method. Remember the reduce method takes two arguments: a callback (which itself takes two args), and an initial value for the count.
 
 */
-const populationTotal = 0;
-console.log(populationTotal);
+const populationTotal = zooAnimals.reduce((acc, index) => {
+  return acc + index.population;
+}, 0);
+console.log('Total Population: ', populationTotal);
 
 
 /*
