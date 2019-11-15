@@ -1,5 +1,6 @@
 // ==== Callbacks ====  
-
+console.log(' ');
+console.log(' === FUNCTIONS === ')
 /* Step 1: Create a higher-order function
   * Create a higher-order function named consume with 3 parameters: a, b and cb
   * The first two parameters can take any argument (we can pass any value as argument)
@@ -29,9 +30,9 @@ function greeting(firstName, lastName){
 
 
 /* Step 3: Check your work by un-commenting the following calls to consume(): */
-// console.log(consume(2, 2, add)); // 4
-// console.log(consume(10, 16, multiply)); // 160
-// console.log(consume("Mary", "Poppins", greeting)); // Hello Mary Poppins, nice to meet you!
+console.log(consume(2, 2, add)); // 4
+console.log(consume(10, 16, multiply)); // 160
+console.log(consume("Mary", "Poppins", greeting)); // Hello Mary Poppins, nice to meet you!
 
 
 // ==== Closures ==== 
@@ -39,7 +40,7 @@ function greeting(firstName, lastName){
 // Explain in your own words why nestedfunction can access the variable internal.
 
 // Explanation: 
-
+//Because of the Closure. An inner function has access to the outer function’s variables—scope. That's whu nestedFunction has access to myFunction's variables.
 
 const external = "I'm outside the function";
 
@@ -53,3 +54,6 @@ function myFunction() {
   nestedFunction();
 }
 myFunction();
+
+
+console.log(' === FUNCTIONS === ')

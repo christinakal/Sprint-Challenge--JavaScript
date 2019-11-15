@@ -54,7 +54,7 @@ tyrannosaurus.roar = function(){
 console.log(tyrannosaurus.roar());
 
 console.log('=== DINOSAURS ===');
-
+console.log(' ');
 // ==== Arrays ====
 console.log('==== ARRAYS ====');
 // Given an array of college graduates.  Complete the following requests using any array method you like
@@ -110,7 +110,7 @@ console.log('I have Uni: ', unisWithUni);
 
 
 console.log('==== ARRAYS ====');
-
+console.log(' ');
 // ==== ADVANCED Array Methods ====
 console.log('==== ADVANCED ARRAY METHOD ====');
 // Given this zoo data from around the United States, follow the instructions below.  Use the specific array methods in the requests below to solve the problems.
